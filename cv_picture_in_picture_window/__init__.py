@@ -1,0 +1,1 @@
+from cv_picture_in_picture_window.cv_picture_in_picture_window import CvWPictureInPictrueWindow
