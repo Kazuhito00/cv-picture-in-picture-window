@@ -1,6 +1,6 @@
-# cv-comparison-slider-window
-2枚の画像を重ね合わせて、マウススライドで比較するウィンドウのサンプルです。<br>
-![bu19j-mplzq](https://user-images.githubusercontent.com/37477845/99143014-9cf5af80-269d-11eb-9eb0-c872d5a5f74c.gif)
+# cv-picture-in-picture-window
+ピクチャーインピクチャーのように表示するサンプルです。<br>
+![bu19j-mplzq](https://user-images.githubusercontent.com/37477845/99147752-c70f9780-26c6-11eb-8bf5-4f9bc73d8dc5.gif)
 
 # Requirement 
 * OpenCV 3.4.2 or later
@@ -13,22 +13,24 @@ python sample.py
 
 # How to use
 以下の流れで呼び出してください。
-CvComparisonSliderWindowクラス作成時には、ウィンドウ名、スライダー上のライン色、ライン太さを指定出来ます。<br>
-省略した場合は、それぞれ'debug'、(255, 255, 255)、1になります。
+CvWPictureInPictrueWindowクラス作成時には、ウィンドウ名、スライダー上のライン色、ライン太さ、小窓の比率(元画像比)、小窓位置(X座標、Y座標それぞれの割合)を指定出来ます。<br>
+省略した場合は、それぞれ'debug'、(255, 255, 255)、1、0.4、(0.55, 0.55)になります。
 
 ```python
-from cv_comparison_slider_window import CvComparisonSliderWindow
+from cv_picture_in_picture_window import CvWPictureInPictrueWindow
 
-cvwindow = CvComparisonSliderWindow(
+cvwindow = CvWPictureInPictrueWindow(
     window_name='debug',
     line_color=(255, 255, 255),
     line_thickness=1,
+    pip_ratio=0.4,
+    pip_position=(0.55, 0.55)
 )
 
 # [省略]
 
 while True:
-    cvwindow.imshow(image1, image2)
+    cvwindow.imshow(image, pip_image)
     key = cv.waitKey(1)
 ```
 
@@ -36,4 +38,4 @@ while True:
 高橋かずひと(https://twitter.com/KzhtTkhs)
  
 # License 
-cv-comparison-slider-window is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+cv-picture-in-picture-window is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
