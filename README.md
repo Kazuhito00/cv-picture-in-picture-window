@@ -1,5 +1,5 @@
 # cv-picture-in-picture-window
-ピクチャーインピクチャーのように表示するサンプルです。<br>
+OpenCVでピクチャーインピクチャーのように表示するサンプルです。<br>
 ![bu19j-mplzq](https://user-images.githubusercontent.com/37477845/99147752-c70f9780-26c6-11eb-8bf5-4f9bc73d8dc5.gif)
 
 # Requirement 
